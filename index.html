@@ -3,541 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TR Lab - AI Research</title>
+    <title>Halqen AI - Next-Gen Artificial Intelligence</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #000;
             color: #e7e9ea;
             line-height: 1.6;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 4rem 0;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 3rem;
-            letter-spacing: 2px;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            font-weight: 300;
-            margin-bottom: 2rem;
-            line-height: 1.1;
-            color: #fff;
-        }
-
-        .tagline {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
-            color: #71767b;
-            margin-bottom: 4rem;
-            max-width: 900px;
-            font-weight: 300;
-        }
-
-        .section {
-            padding: 3rem 0;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            font-weight: 300;
-            margin-bottom: 2.5rem;
-            color: #fff;
-        }
-
-        .focus-areas {
-            display: grid;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .focus-card {
-            border-bottom: 1px solid #2f3336;
-            padding-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .focus-card:hover {
-            border-bottom-color: #fff;
-        }
-
-        .focus-card h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 0.75rem;
-            color: #fff;
-        }
-
-        .focus-card p {
-            color: #71767b;
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
-
-        .current-research {
-            background: #16181c;
-            border-radius: 16px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .current-research h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: #fff;
-        }
-
-        .current-research p {
-            color: #71767b;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .tag {
-            background: transparent;
-            border: 1px solid #2f3336;
-            color: #e7e9ea;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .tag:hover {
-            border-color: #fff;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .mission {
-            max-width: 900px;
-            margin: 4rem 0;
-        }
-
-        .mission p {
-            font-size: 1.2rem;
-            color: #71767b;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        footer {
-            padding: 3rem 0;
-            border-top: 1px solid #2f3336;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            color: #71767b;
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-
-            .hero {
-                padding: 3rem 0;
-            }
-
-            .section {
-                padding: 4rem 0;
-            }
-
-            .current-research {
-                padding: 2rem;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .focus-areas {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 4rem 0; }
+        .logo { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 3rem; letter-spacing: 2px; }
+        h1 { font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 300; margin-bottom: 2rem; line-height: 1.1; color: #fff; }
+        .tagline { font-size: clamp(1.2rem, 3vw, 1.5rem); color: #71767b; margin-bottom: 4rem; max-width: 900px; font-weight: 300; }
+        .section { padding: 3rem 0; }
+        .section-title { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 300; margin-bottom: 2.5rem; color: #fff; }
+        .focus-areas { display: grid; gap: 2rem; margin-bottom: 3rem; }
+        .focus-card { border-bottom: 1px solid #2f3336; padding-bottom: 2rem; transition: all 0.3s ease; }
+        .focus-card:hover { border-bottom-color: #fff; }
+        .focus-card h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.75rem; color: #fff; }
+        .focus-card p { color: #71767b; font-size: 1.1rem; font-weight: 300; }
+        .current-research { background: #16181c; border-radius: 16px; padding: 3rem; margin-bottom: 4rem; }
+        .current-research h3 { font-size: 1.8rem; font-weight: 400; margin-bottom: 1.5rem; color: #fff; }
+        .current-research p { color: #71767b; font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .tag { background: transparent; border: 1px solid #2f3336; color: #e7e9ea; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.95rem; transition: all 0.3s ease; }
+        .tag:hover { border-color: #fff; background: rgba(255, 255, 255, 0.05); }
+        .mission { max-width: 900px; margin: 4rem 0; }
+        .mission p { font-size: 1.2rem; color: #71767b; line-height: 1.8; font-weight: 300; }
+        footer { padding: 3rem 0; border-top: 1px solid #2f3336; margin-top: 3rem; }
+        footer p { color: #71767b; font-size: 0.95rem; }
+        @media (max-width: 768px) { .container { padding: 0 1.5rem; } .hero { padding: 3rem 0; } .section { padding: 4rem 0; } .current-research { padding: 2rem; } }
+        @media (min-width: 768px) { .focus-areas { grid-template-columns: repeat(3, 1fr); } }
 
         /* Grid Animation Background */
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .grid-line {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .grid-line.vertical {
-            width: 1px;
-            height: 100%;
-            animation: gridPulse 3s ease-in-out infinite;
-        }
-
-        .grid-line.horizontal {
-            height: 1px;
-            width: 100%;
-            animation: gridPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes gridPulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+        .grid-line { position: absolute; background: rgba(255, 255, 255, 0.03); }
+        .grid-line.vertical { width: 1px; height: 100%; animation: gridPulse 3s ease-in-out infinite; }
+        .grid-line.horizontal { height: 1px; width: 100%; animation: gridPulse 3s ease-in-out infinite; }
+        @keyframes gridPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
         /* Floating particles */
-        .particle-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            animation: floatParticle 15s infinite ease-in-out;
-        }
-
-        @keyframes floatParticle {
-            0%, 100% {
-                transform: translate(0, 0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translate(100px, -100vh);
-                opacity: 0;
-            }
-        }
+        .particle-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+        .particle { position: absolute; width: 2px; height: 2px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; animation: floatParticle 15s infinite ease-in-out; }
+        @keyframes floatParticle { 0%, 100% { transform: translate(0, 0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translate(100px, -100vh); opacity: 0; } }
 
         /* Fade in animations */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .slide-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideUp 0.8s ease-out forwards;
-        }
-
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo {
-            animation-delay: 0.1s;
-        }
-
-        h1 {
-            animation-delay: 0.2s;
-        }
-
-        .tagline {
-            animation-delay: 0.3s;
-        }
-
-        .focus-card {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 0.6s ease-out forwards;
-        }
-
-        .focus-card:nth-child(1) { animation-delay: 0.5s; }
-        .focus-card:nth-child(2) { animation-delay: 0.6s; }
-        .focus-card:nth-child(3) { animation-delay: 0.7s; }
-
-        .current-research {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 0.8s ease-out forwards;
-            animation-delay: 0.9s;
-        }
+        .fade-in { opacity: 0; animation: fadeIn 1s ease-out forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .slide-up { opacity: 0; transform: translateY(30px); animation: slideUp 0.8s ease-out forwards; }
+        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+        .logo { animation-delay: 0.1s; } h1 { animation-delay: 0.2s; } .tagline { animation-delay: 0.3s; }
 
         /* Glow effect on hover */
-        .glow-effect {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glow-effect::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .glow-effect:hover::before {
-            width: 300px;
-            height: 300px;
-        }
+        .glow-effect { position: relative; overflow: hidden; }
+        .glow-effect::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s; }
+        .glow-effect:hover::before { width: 300px; height: 300px; }
 
         /* Products Section */
-        .products-section {
-            padding: 3rem 0;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: #16181c;
-            border: 1px solid #2f3336;
-            border-radius: 12px;
-            padding: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            min-height: 480px;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            border-color: #3f4346;
-            transform: translateY(-4px);
-        }
-
-        .product-content {
-            flex: 0 0 auto;
-            margin-bottom: 2rem;
-        }
-
-        .product-content h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .product-content p {
-            color: #71767b;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .product-visual {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem 0;
-            opacity: 0.6;
-        }
-
-        .neural-network {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-        }
-
-        .neural-network circle {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .neural-network circle:nth-child(1) { animation-delay: 0s; }
-        .neural-network circle:nth-child(2) { animation-delay: 0.2s; }
-        .neural-network circle:nth-child(3) { animation-delay: 0.4s; }
-        .neural-network circle:nth-child(4) { animation-delay: 0.6s; }
-        .neural-network circle:nth-child(5) { animation-delay: 0.8s; }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-
-        .code-visual, .docs-visual {
-            width: 100%;
-        }
-
-        .code-window, .doc-window {
-            background: #000;
-            border: 1px solid #2f3336;
-            border-radius: 8px;
-            padding: 1rem;
-        }
-
-        .code-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #2f3336;
-        }
-
-        .code-title {
-            color: #71767b;
-            font-size: 0.85rem;
-        }
-
-        .code-controls {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .code-controls span {
-            width: 8px;
-            height: 8px;
-            background: #2f3336;
-            border-radius: 50%;
-        }
-
-        .code-lines, .doc-lines {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .code-line, .doc-line {
-            height: 8px;
-            background: #2f3336;
-            border-radius: 4px;
-            animation: loadLine 2s ease-in-out infinite;
-        }
-
-        .code-line.short, .doc-line.short {
-            width: 60%;
-        }
-
-        .code-line.medium, .doc-line.medium {
-            width: 80%;
-        }
-
-        .code-line:nth-child(1) { animation-delay: 0s; }
-        .code-line:nth-child(2) { animation-delay: 0.2s; }
-        .code-line:nth-child(3) { animation-delay: 0.4s; }
-        .code-line:nth-child(4) { animation-delay: 0.6s; }
-
-        .doc-line:nth-child(1) { animation-delay: 0.1s; }
-        .doc-line:nth-child(2) { animation-delay: 0.3s; }
-        .doc-line:nth-child(3) { animation-delay: 0.5s; }
-        .doc-line:nth-child(4) { animation-delay: 0.7s; }
-        .doc-line:nth-child(5) { animation-delay: 0.9s; }
-
-        @keyframes loadLine {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-        }
-
-        .product-btn {
-            background: transparent;
-            border: 1px solid #2f3336;
-            color: #e7e9ea;
-            padding: 0.75rem 1.5rem;
-            border-radius: 24px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-            margin-top: auto;
-        }
-
-        .product-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: #fff;
-            transform: translateX(4px);
-        }
-
-        @media (max-width: 768px) {
-            .products-section {
-                padding: 4rem 0;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-card {
-                min-height: 420px;
-            }
-        }
+        .products-section { padding: 3rem 0; max-width: 1400px; margin: 0 auto; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .product-card { background: #16181c; border: 1px solid #2f3336; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; min-height: 480px; transition: all 0.3s ease; }
+        .product-card:hover { border-color: #3f4346; transform: translateY(-4px); }
+        .product-content { flex: 0 0 auto; margin-bottom: 2rem; }
+        .product-content h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: #fff; }
+        .product-content p { color: #71767b; font-size: 1rem; line-height: 1.6; }
+        .product-visual { flex: 1; display: flex; align-items: center; justify-content: center; margin: 2rem 0; opacity: 0.6; }
+        .product-btn { background: transparent; border: 1px solid #2f3336; color: #e7e9ea; padding: 0.75rem 1.5rem; border-radius: 24px; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.5px; margin-top: auto; }
+        .product-btn:hover { background: rgba(255, 255, 255, 0.05); border-color: #fff; transform: translateX(4px); }
+        @media (max-width: 768px) { .products-section { padding: 4rem 0; } .products-grid { grid-template-columns: 1fr; } .product-card { min-height: 420px; } }
     </style>
 </head>
 <body>
     <div class="grid-bg" id="gridBg"></div>
     <div class="particle-container" id="particles"></div>
-    
+
     <div class="container">
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="logo fade-in">TR LAB</div>
-            <h1 class="slide-up">Understanding intelligence through research</h1>
-            <p class="tagline slide-up">Exploring intelligent systems that learn, adapt, and automate. Conducting independent research on AI, Machine Learning, and Automation technologies for practical, real-world applications.</p>
+            <div class="logo fade-in">HALQEN AI</div>
+            <h1 class="slide-up">Building the Future of Artificial Intelligence</h1>
+            <p class="tagline slide-up">Providing cutting-edge AI solutions for businesses, automation, and intelligent systems. We innovate, develop, and deploy AI technologies for real-world impact.</p>
         </section>
 
+        <!-- Products Section -->
         <section class="products-section">
             <div class="products-grid">
                 <div class="product-card glow-effect">
                     <div class="product-content">
                         <h3>AI Solutions</h3>
-                        <p>Deploy cutting-edge AI models for your research and production needs. Advanced neural networks optimized for performance.</p>
+                        <p>Deploy advanced AI models optimized for your business, research, and automation needs.</p>
                     </div>
                     <div class="product-visual">
+                        <!-- Neural Network SVG -->
                         <svg viewBox="0 0 200 200" class="neural-network">
                             <circle cx="50" cy="100" r="4" fill="rgba(255,255,255,0.2)"/>
                             <circle cx="100" cy="60" r="4" fill="rgba(255,255,255,0.2)"/>
@@ -557,17 +116,14 @@
 
                 <div class="product-card glow-effect">
                     <div class="product-content">
-                        <h3>Research API</h3>
-                        <p>Integrate our ML capabilities with enhanced speed, precision, and multilingual support for your applications.</p>
+                        <h3>API & Integration</h3>
+                        <p>Integrate Halqen AI models directly into your applications with speed, scalability, and reliability.</p>
                     </div>
                     <div class="product-visual code-visual">
                         <div class="code-window">
                             <div class="code-header">
                                 <span class="code-title">API</span>
-                                <div class="code-controls">
-                                    <span></span>
-                                    <span></span>
-                                </div>
+                                <div class="code-controls"><span></span><span></span></div>
                             </div>
                             <div class="code-lines">
                                 <div class="code-line"></div>
@@ -583,7 +139,7 @@
                 <div class="product-card glow-effect">
                     <div class="product-content">
                         <h3>Documentation</h3>
-                        <p>Learn how to quickly integrate our solutions and explore comprehensive guides covering implementation.</p>
+                        <p>Comprehensive guides to integrate, deploy, and scale AI solutions for your needs.</p>
                     </div>
                     <div class="product-visual docs-visual">
                         <div class="doc-window">
@@ -601,85 +157,51 @@
             </div>
         </section>
 
+        <!-- Mission Section -->
         <section class="section">
-           
             <div class="current-research glow-effect">
-                <h3>Current Research</h3>
-                <p>Developing intelligent automation systems enhanced by AI and ML capabilities. Researching how machine learning can optimize automated processes and create self-improving systems that adapt to changing environments and requirements.</p>
+                <h3>Our Mission</h3>
+                <p>Halqen AI aims to revolutionize industries with intelligent automation, predictive analytics, and adaptive AI systems that grow with your business.</p>
                 
                 <div class="tags">
-                    <div class="tag">Industrial Automation</div>
+                    <div class="tag">AI Automation</div>
                     <div class="tag">Deep Learning</div>
-                    <div class="tag">Warehouse Robotics</div>
-                    <div class="tag">Logistics & Supply Chain Automation</div>
-                    <div class="tag">Workflow Automation</div>
-                    <div class="tag">Sensors and Data Analytics</div>
+                    <div class="tag">Computer Vision</div>
+                    <div class="tag">Natural Language Processing</div>
+                    <div class="tag">Predictive Analytics</div>
+                    <div class="tag">Robotics & IoT</div>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>© 2026 TR Lab. All rights reserved.</p>
+            <p>© 2026 Halqen AI. All rights reserved.</p>
         </footer>
     </div>
 
     <script>
-        // Create grid background
+        // Grid background & particles remain unchanged
         const gridBg = document.getElementById('gridBg');
         const gridSpacing = 100;
-        
-        // Vertical lines
         for (let i = 0; i < window.innerWidth / gridSpacing; i++) {
-            const line = document.createElement('div');
-            line.className = 'grid-line vertical';
+            const line = document.createElement('div'); line.className = 'grid-line vertical';
             line.style.left = (i * gridSpacing) + 'px';
-            line.style.animationDelay = (i * 0.1) + 's';
-            gridBg.appendChild(line);
+            line.style.animationDelay = (i * 0.1) + 's'; gridBg.appendChild(line);
         }
-        
-        // Horizontal lines
         for (let i = 0; i < window.innerHeight / gridSpacing; i++) {
-            const line = document.createElement('div');
-            line.className = 'grid-line horizontal';
+            const line = document.createElement('div'); line.className = 'grid-line horizontal';
             line.style.top = (i * gridSpacing) + 'px';
-            line.style.animationDelay = (i * 0.1) + 's';
-            gridBg.appendChild(line);
+            line.style.animationDelay = (i * 0.1) + 's'; gridBg.appendChild(line);
         }
-
-        // Create floating particles
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
+            const particle = document.createElement('div'); particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
             particle.style.animationDelay = Math.random() * 15 + 's';
             particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
             particlesContainer.appendChild(particle);
         }
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements that need scroll animation
-        document.querySelectorAll('.section-title, .mission').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s, transform 0.8s';
-            observer.observe(el);
-        });
     </script>
 </body>
 </html>
