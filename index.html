@@ -72,6 +72,45 @@
         .product-visual { flex: 1; display: flex; align-items: center; justify-content: center; margin: 2rem 0; opacity: 0.6; }
         .product-btn { background: transparent; border: 1px solid #2f3336; color: #e7e9ea; padding: 0.75rem 1.5rem; border-radius: 24px; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.5px; margin-top: auto; }
         .product-btn:hover { background: rgba(255, 255, 255, 0.05); border-color: #fff; transform: translateX(4px); }
+
+        /* Neural Network SVG */
+        .neural-network { width: 200px; height: 200px; }
+        .neural-network circle { animation: pulse 2s ease-in-out infinite; }
+        .neural-network line { animation: lineGlow 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+        @keyframes lineGlow { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.6; } }
+
+        /* Code Visual Styles */
+        .code-visual { width: 100%; max-width: 300px; }
+        .code-window { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 1rem; }
+        .code-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #30363d; }
+        .code-title { color: #8b949e; font-size: 0.75rem; font-weight: 600; }
+        .code-controls { display: flex; gap: 6px; }
+        .code-controls span { width: 8px; height: 8px; border-radius: 50%; background: #30363d; }
+        .code-lines { display: flex; flex-direction: column; gap: 8px; }
+        .code-line { height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; animation: codePulse 3s ease-in-out infinite; }
+        .code-line.short { width: 60%; }
+        .code-line.medium { width: 80%; }
+        @keyframes codePulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+        .code-line:nth-child(1) { animation-delay: 0s; }
+        .code-line:nth-child(2) { animation-delay: 0.3s; }
+        .code-line:nth-child(3) { animation-delay: 0.6s; }
+        .code-line:nth-child(4) { animation-delay: 0.9s; }
+
+        /* Docs Visual Styles */
+        .docs-visual { width: 100%; max-width: 300px; }
+        .doc-window { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; }
+        .doc-lines { display: flex; flex-direction: column; gap: 10px; }
+        .doc-line { height: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; animation: docPulse 3s ease-in-out infinite; }
+        .doc-line.short { width: 70%; }
+        .doc-line.medium { width: 85%; }
+        @keyframes docPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+        .doc-line:nth-child(1) { animation-delay: 0s; }
+        .doc-line:nth-child(2) { animation-delay: 0.2s; }
+        .doc-line:nth-child(3) { animation-delay: 0.4s; }
+        .doc-line:nth-child(4) { animation-delay: 0.6s; }
+        .doc-line:nth-child(5) { animation-delay: 0.8s; }
+
         @media (max-width: 768px) { .products-section { padding: 4rem 0; } .products-grid { grid-template-columns: 1fr; } .product-card { min-height: 420px; } }
     </style>
 </head>
@@ -96,19 +135,18 @@
                         <p>Deploy advanced AI models optimized for your business, research, and automation needs.</p>
                     </div>
                     <div class="product-visual">
-                        <!-- Neural Network SVG -->
                         <svg viewBox="0 0 200 200" class="neural-network">
-                            <circle cx="50" cy="100" r="4" fill="rgba(255,255,255,0.2)"/>
-                            <circle cx="100" cy="60" r="4" fill="rgba(255,255,255,0.2)"/>
-                            <circle cx="100" cy="100" r="4" fill="rgba(255,255,255,0.2)"/>
-                            <circle cx="100" cy="140" r="4" fill="rgba(255,255,255,0.2)"/>
-                            <circle cx="150" cy="100" r="4" fill="rgba(255,255,255,0.2)"/>
-                            <line x1="50" y1="100" x2="100" y2="60" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                            <line x1="50" y1="100" x2="100" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                            <line x1="50" y1="100" x2="100" y2="140" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                            <line x1="100" y1="60" x2="150" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                            <line x1="100" y1="100" x2="150" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                            <line x1="100" y1="140" x2="150" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <circle cx="50" cy="100" r="4" fill="rgba(255,255,255,0.5)"/>
+                            <circle cx="100" cy="60" r="4" fill="rgba(255,255,255,0.5)"/>
+                            <circle cx="100" cy="100" r="4" fill="rgba(255,255,255,0.5)"/>
+                            <circle cx="100" cy="140" r="4" fill="rgba(255,255,255,0.5)"/>
+                            <circle cx="150" cy="100" r="4" fill="rgba(255,255,255,0.5)"/>
+                            <line x1="50" y1="100" x2="100" y2="60" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            <line x1="50" y1="100" x2="100" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            <line x1="50" y1="100" x2="100" y2="140" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            <line x1="100" y1="60" x2="150" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            <line x1="100" y1="100" x2="150" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            <line x1="100" y1="140" x2="150" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
                         </svg>
                     </div>
                     <button class="product-btn">EXPLORE NOW ↗</button>
@@ -123,7 +161,7 @@
                         <div class="code-window">
                             <div class="code-header">
                                 <span class="code-title">API</span>
-                                <div class="code-controls"><span></span><span></span></div>
+                                <div class="code-controls"><span></span><span></span><span></span></div>
                             </div>
                             <div class="code-lines">
                                 <div class="code-line"></div>
@@ -180,22 +218,29 @@
     </div>
 
     <script>
-        // Grid background & particles remain unchanged
+        // Grid background
         const gridBg = document.getElementById('gridBg');
         const gridSpacing = 100;
         for (let i = 0; i < window.innerWidth / gridSpacing; i++) {
-            const line = document.createElement('div'); line.className = 'grid-line vertical';
+            const line = document.createElement('div');
+            line.className = 'grid-line vertical';
             line.style.left = (i * gridSpacing) + 'px';
-            line.style.animationDelay = (i * 0.1) + 's'; gridBg.appendChild(line);
+            line.style.animationDelay = (i * 0.1) + 's';
+            gridBg.appendChild(line);
         }
         for (let i = 0; i < window.innerHeight / gridSpacing; i++) {
-            const line = document.createElement('div'); line.className = 'grid-line horizontal';
+            const line = document.createElement('div');
+            line.className = 'grid-line horizontal';
             line.style.top = (i * gridSpacing) + 'px';
-            line.style.animationDelay = (i * 0.1) + 's'; gridBg.appendChild(line);
+            line.style.animationDelay = (i * 0.1) + 's';
+            gridBg.appendChild(line);
         }
+
+        // Particles
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div'); particle.className = 'particle';
+            const particle = document.createElement('div');
+            particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
             particle.style.animationDelay = Math.random() * 15 + 's';
